@@ -1,0 +1,23 @@
+{
+  "name": "jian-analyse",
+  "version": "1.0.0",
+  "description": "通过爬取简书热门文章，分析怎样的文章才能上热门",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengwenfu/jian-analyse.git"
+  },
+  "author": "zengwenfu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zengwenfu/jian-analyse/issues"
+  },
+  "homepage": "https://github.com/zengwenfu/jian-analyse#readme",
+  "devDependencies": {
+    "cheerio": "^0.22.0",
+    "nunjucks": "^2.5.2"
+  }
+}
