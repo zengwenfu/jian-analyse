@@ -1,6 +1,5 @@
 'use strict';
 var request = require('./request.js');
-var fs = require("fs");
 
 
 var times = 0;
@@ -72,7 +71,6 @@ module.exports = function() {
     var seek = new Seek();
     return new Promise(function(resolve, reject) {
         seek.seek(function(pages) {
-            fs.writeFile('./page.html', pages[0]);
             resolve(pages);
         });
     });

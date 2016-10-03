@@ -49,7 +49,7 @@ Analyse.prototype.getPages = function(data) {
     return pro;
 }
 
-Analyse.prototype.analyse = function() {
+Analyse.prototype.analyse = function(callback) {
     var self = this;
     seek().then(function(data) {
         self.getPages(data).then(function(result) {
@@ -58,14 +58,17 @@ Analyse.prototype.analyse = function() {
                 urls = urls.concat(result[i]);
             }
             seekPage(urls).then(function(res) {
-                var renderRes = nunjucks.render('./tpl/index.tpl', {
+                var renderRes = nunjucks.render('./app/tpl/index.tpl', {
                     items: res
                 });
-                fs.writeFile('./views/index.html', renderRes, function() {});
-                // console.log(res);
+                fs.writeFile('./app/views/index.html', renderRes, function() {});
+                callback && callback();
             });
         });
     });
 }
 
-new Analyse().analyse();
+module.exports = function(callback) {
+    new Analyse().analyse(callback);
+}
+

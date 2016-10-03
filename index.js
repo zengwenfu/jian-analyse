@@ -1,0 +1,9 @@
+'use strict';
+var analyse = require('./app/analyse.js');
+
+var before = new Date();
+analyse(function() {
+    var end = new Date();
+    var time = (end.getTime() - before.getTime())/1000;
+    console.log('总耗时:' + time + 's');
+});
