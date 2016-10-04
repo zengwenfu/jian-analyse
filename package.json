@@ -4,7 +4,8 @@
   "description": "通过爬取简书热门文章，分析怎样的文章才能上热门",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/zengwenfu/jian-analyse#readme",
   "devDependencies": {
+    "browser-sync": "^2.17.0",
     "cheerio": "^0.22.0",
     "nunjucks": "^2.5.2"
   }

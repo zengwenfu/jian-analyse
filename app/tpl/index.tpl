@@ -9,10 +9,24 @@
 </head>
 
 <body>
-    <ul>
-    {% for item in items %}
-      <li>{{ item.title }}: {{ item.codes }}</li>
-    {% endfor %}
-</ul>
+    <div class="container">
+        <h2>简书程序员专题热门文章900篇代码块统计</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>文章名</th>
+                    <th>代码块数量</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.codes }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
