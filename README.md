@@ -3,5 +3,5 @@
 
 ## 运行
 1. npm install
-2. node index.js
-3. 打开app/views/index.html查看结果
+2. npm run start
+3. 爬取结束后会自动打开结果页面
