@@ -17,7 +17,8 @@ html {
 }
 
 .container {
-    width: 850px;
+    max-width: 850px;
+    width: 100%;
     margin: auto;
     margin-top: 30px;
 }
@@ -88,4 +89,13 @@ td, th {
     margin: auto;
 }
 
+h2 {
+    padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .chart {
+        height: 300px;
+    }
+}
 
