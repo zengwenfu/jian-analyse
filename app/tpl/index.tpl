@@ -9,8 +9,15 @@
 </head>
 
 <body>
+    <div style="display: none">
+        <div id='zeroCount'>{{zeroCount}}</div>
+        <div id='oneToTen'>{{oneToTen}}</div>
+        <div id='elToTwo'>{{elToTwo}}</div>
+        <div id='beyondTwo'>{{beyondTwo}}</div>
+    </div>
     <div class="container">
         <h2>简书程序员专题热门文章900篇代码块统计</h2>
+        <div id="chart" class="chart"></div>
         <table>
             <thead>
                 <tr>
@@ -28,5 +35,7 @@
             </tbody>
         </table>
     </div>
+    <script type="text/javascript" src="js/echarts.common.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

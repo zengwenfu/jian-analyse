@@ -58,9 +58,7 @@ Analyse.prototype.analyse = function(callback) {
                 urls = urls.concat(result[i]);
             }
             seekPage(urls).then(function(res) {
-                var renderRes = nunjucks.render('./app/tpl/index.tpl', {
-                    items: res
-                });
+                var renderRes = nunjucks.render('./app/tpl/index.tpl', res);
                 fs.writeFile('./app/views/index.html', renderRes, function() {});
                 callback && callback();
             });
