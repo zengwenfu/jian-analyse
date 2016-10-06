@@ -5,3 +5,4 @@
 1. npm install
 2. npm run start
 3. 爬取结束后会自动打开结果页面
+4. [查看效果](https://zengwenfu.github.io/jian-analyse/app/views/)
