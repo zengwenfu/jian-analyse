@@ -16,24 +16,24 @@ Analyse.prototype.load = function(data, i) {
     return new Promise(function(resolve, reject) {
         var $ = cheerio.load(data);
         var pages = [];
-        var els = $('.article-list li');
-        if(els.length === 0) {
-            console.warn('load error page:' + i );
+        var els = $('li[data-note-id]');
+        if (els.length === 0) {
+            console.warn('load error page:' + i);
             resolve([]);
         }
         els.each(function(index) {
             if ($(this).attr('class') === 'have-img') {
                 pages.push($(this).children('a').attr('href'));
             } else {
-                pages.push($(this).children('div').children('.title').children('a').attr('href'));
+                pages.push($(this).children('div').children('.title').attr('href'));
             }
-           
-            if(index === els.length - 1) {
+
+            if (index === els.length - 1) {
                 resolve(pages);
             }
         });
     });
-    
+
 }
 
 /**

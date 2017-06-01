@@ -15,7 +15,7 @@ function Seek() {
  */
 Seek.prototype.createPromise = function(i) {
     var options = {
-        url: 'http://www.jianshu.com/collections/16/notes?order_by=likes_count&page=' + i,
+        url: 'http://www.jianshu.com/c/NEt52a?order_by=commented_at&page=' + i,
         type: 'get'
     }
     return new Promise(function(resolve, reject) {
